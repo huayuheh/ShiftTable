@@ -175,6 +175,7 @@ var username = localStorage.username;
       
     e.preventDefault();
 
+
     var data = $(this).serializeArray();
       groupName = data[0].value;
       $("#groupName").text(groupName);
@@ -183,7 +184,9 @@ var username = localStorage.username;
       groupMeetingPlace = data[3].value;
       groupMeetingTime = parseInt(data[4].value);
       console.log(groupName + "<br>" + groupMember1 + "<br>" +groupMember2 + "<br>" +groupMeetingPlace + "<br>");
-    Parse.initialize("hS3IWSgZKENFDTTbACS9JXC53QWDSyzAsmQ9I5Ez", "lgeS8H24S0GJa7bXdymfblJatLzFmA0TohBE1Www");
+
+
+
     var timeTable = Parse.Object.extend("time_table");
     var query = new Parse.Query(timeTable);
 
@@ -243,18 +246,15 @@ var username = localStorage.username;
               var lat = object.get("build_location").latitude;
               var lng = object.get("build_location").longitude;
 
-              initMap(lat,lng,build_name,address);  
-              
+              initMap(lat,lng,build_name,address);               
             }
           },
           error: function(error) {
             alert("Error: " + error.code + " " + error.message);
           }
-
-
         });
 
-
+        
   });
 
       $("#signOut").on("click",function(e){
