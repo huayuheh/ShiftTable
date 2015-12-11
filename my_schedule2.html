@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+	<meta charset="UTF-8">
+	<title>Shift Table</title>
+	
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap-table.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+	
+    
+
+
+</head>
+
+<body>
+
+<header>
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar2">
+          			<span class="sr-only">Toggle navigation</span>
+         			<span class="icon-bar"></span>
+          			<span class="icon-bar"></span>
+         			<span class="icon-bar"></span>
+        		</button>
+				<a class="navbar-brand" href="index.html"><span>Shift Table</span></a>
+			</div>
+			 <div class="collapse navbar-collapse" id="myNavbar2">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="my_schedule.html">My Calendar</a></li>
+					<li ><a href="group.html">Group</a></li>
+					<li ><a href="profile1.html">Profile</a></li>
+				</ul>	
+				<ul class="nav navbar-nav navbar-right">
+					<li><span id="username"></span></li>
+					<li><button type="button" class="btn btn-link btn-lg" id="signOut">Sign Out</button></li>
+				</ul>
+			</div>
+		</div>	
+	</nav>
+</header>
+
+
+	<div class="page container">
+		<br><br><br><br>
+		<div class="col-xs-12 col-sm-12 col-md-12 user">
+      <div class="s-icon face"></div>
+			
+			<h2 id="username_big"></h2>
+		</div>	
+		<table data-toggle="table">
+    <thead>
+        <tr>
+        	<th>TIME</th>
+            <th>MON</th>
+            <th>TUE</th>
+            <th>WED</th>
+            <th>THU</th>
+            <th>FRI</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr id="8">
+           <td>8</td>
+            <td class="button 1"><button onclick="busyTimes(1,8)"></button></td>
+            <td class="button 2"><button onclick="busyTimes(2,8)"></button></td>
+            <td class="button 3"><button onclick="busyTimes(3,8)"></button></td>
+            <td class="button 4"><button onclick="busyTimes(4,8)"></button></td>
+            <td class="button 5"><button onclick="busyTimes(5,8)"></button></td>
+        </tr>
+        <tr id="9">
+           <td>9</td>
+            <td  class="button 1"><button onclick="busyTimes(1,9)"></button></td>
+            <td  class="button 2"><button onclick="busyTimes(2,9)"></button></td>
+            <td  class="button 3"><button onclick="busyTimes(3,9)"></button></td>
+            <td  class="button 4"><button onclick="busyTimes(4,9)"></button></td>
+            <td  class="button 5"><button onclick="busyTimes(5,9)"></button></td>
+        </tr>
+         <tr id="10">
+           <td >10</td>
+            <td class="button 1"><button onclick="busyTimes(1,10)"></button></td>
+            <td class="button 2"><button onclick="busyTimes(2,10)"></button></td>
+            <td class="button 3"><button onclick="busyTimes(3,10)"></button></td>
+            <td class="button 4"><button onclick="busyTimes(4,10)"></button></td>
+            <td class="button 5"><button onclick="busyTimes(5,10)"></button></td>
+        </tr>
+         <tr id="11">
+           <td >11</td>
+            <td class="button 1"><button onclick="busyTimes(1,11)"></button></td>
+            <td class="button 2"><button onclick="busyTimes(2,11)"></button></td>
+            <td class="button 3"><button onclick="busyTimes(3,11)"></button></td>
+            <td class="button 4"><button onclick="busyTimes(4,11)"></button></td>
+            <td class="button 5"><button onclick="busyTimes(5,11)"></button></td>
+        </tr>
+         <tr id="12">
+           <td>12</td>
+            <td class="button 1"><button onclick="busyTimes(1,12)"></button></td>
+            <td class="button 2"><button onclick="busyTimes(2,12)"></button></td>
+            <td class="button 3"><button onclick="busyTimes(3,12)"></button></td>
+            <td class="button 4"><button onclick="busyTimes(4,12)"></button></td>
+            <td class="button 5"><button onclick="busyTimes(5,12)"></button></td>
+        </tr>
+
+         <tr id="13">
+           <td>1</td>
+            <td class="button 1"><button onclick="busyTimes(1,13)"></button></td>
+            <td class="button 2"><button onclick="busyTimes(2,13)"></button></td>
+            <td class="button 3"><button onclick="busyTimes(3,13)"></button></td>
+            <td class="button 4"><button onclick="busyTimes(4,13)"></button></td>
+            <td class="button 5"><button onclick="busyTimes(5,13)"></button></td>
+        </tr>
+         <tr id="14">
+           <td>2</td>
+            <td class="button 1"><button onclick="busyTimes(1,14)"></button></td>
+            <td class="button 2"><button onclick="busyTimes(2,14)"></button></td>
+            <td class="button 3"><button onclick="busyTimes(3,14)"></button></td>
+            <td class="button 4"><button onclick="busyTimes(4,14)"></button></td>
+            <td class="button 5"><button onclick="busyTimes(5,14)"></button></td>
+        </tr>
+         <tr id="15">
+           <td>3</td>
+            <td class="button 1"><button onclick="busyTimes(1,15)"></button></td>
+            <td class="button 2"><button onclick="busyTimes(2,15)"></button></td>
+            <td class="button 3"><button onclick="busyTimes(3,15)"></button></td>
+            <td class="button 4"><button onclick="busyTimes(4,15)"></button></td>
+            <td class="button 5"><button onclick="busyTimes(5,15)"></button></td>
+        </tr>
+         <tr id="16">
+           <td>4</td>
+            <td class="button 1"><button onclick="busyTimes(1,16)"></button></td>
+            <td class="button 2"><button onclick="busyTimes(2,16)"></button></td>
+            <td class="button 3"><button onclick="busyTimes(3,16)"></button></td>
+            <td class="button 4"><button onclick="busyTimes(4,16)"></button></td>
+            <td class="button 5"><button onclick="busyTimes(5,16)"></button></td>
+        </tr>
+         <tr id="17">
+           <td>5</td>
+            <td class="button 1"><button onclick="busyTimes(1,17)"></button></td>
+            <td class="button 2"><button onclick="busyTimes(2,17)"></button></td>
+            <td class="button 3"><button onclick="busyTimes(3,17)"></button></td>
+            <td class="button 4"><button onclick="busyTimes(4,17)"></button></td>
+            <td class="button 5"><button onclick="busyTimes(5,17)"></button></td>
+        </tr>
+         <tr id="18">
+           <td>6</td>
+            <td class="button 1"><button onclick="busyTimes(1,18)"></button></td>
+            <td class="button 2"><button onclick="busyTimes(2,18)"></button></td>
+            <td class="button 3"><button onclick="busyTimes(3,18)"></button></td>
+            <td class="button 4"><button onclick="busyTimes(4,18)"></button></td>
+            <td class="button 5"><button onclick="busyTimes(5,18)"></button></td>
+        </tr>
+         <tr id="19">
+           <td>7</td>
+            <td class="button 1"><button onclick="busyTimes(1,19)"></button></td>
+            <td class="button 2"><button onclick="busyTimes(2,19)"></button></td>
+            <td class="button 3"><button onclick="busyTimes(3,19)"></button></td>
+            <td class="button 4"><button onclick="busyTimes(4,19)"></button></td>
+            <td class="button 5"><button onclick="busyTimes(5,19)"></button></td>
+        </tr>
+         <tr id="20">
+           <td>8</td>
+            <td class="button 1"><button onclick="busyTimes(1,20)"></button></td>
+            <td class="button 2"><button onclick="busyTimes(2,20)"></button></td>
+            <td class="button 3"><button onclick="busyTimes(3,20)"></button></td>
+            <td class="button 4"><button onclick="busyTimes(4,20)"></button></td>
+            <td class="button 5"><button onclick="busyTimes(5,20)"></button></td>
+        </tr>
+         <tr id="21">
+           <td>9</td>
+            <td class="button 1"><button onclick="busyTimes(1,21)"></button></td>
+            <td class="button 2"><button onclick="busyTimes(2,21)"></button></td>
+            <td class="button 3"><button onclick="busyTimes(3,21)"></button></td>
+            <td class="button 4"><button onclick="busyTimes(4,21)"></button></td>
+            <td class="button 5"><button onclick="busyTimes(5,21)"></button></td>
+        </tr>
+         <tr id="22">
+           <td>10</td>
+            <td class="button 1"><button onclick="busyTimes(1,22)"></button></td>
+            <td class="button 2"><button onclick="busyTimes(2,22)"></button></td>
+            <td class="button 3"><button onclick="busyTimes(3,22)"></button></td>
+            <td class="button 4"><button onclick="busyTimes(4,22)"></button></td>
+            <td class="button 5"><button onclick="busyTimes(5,22)"></button></td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<div class="container">
+	<div class="row">
+		<div class="col-sm-4"><p><i class="fa fa-square my-class"></i>My Classes</p></div>
+		<div class="col-sm-4"><p><i class="fa fa-square busy-time"></i>Click on Other Busy Time</p></div>
+		
+		
+	</div>
+	
+</div>
+		
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+          
+                    <p class="copyright text-muted small">Shift Table &copy; Build in 11.22.2015. All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+	<script src="js/parse-1.6.4.min.js"></script>
+	<script src="js/jquery-2.1.4.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="http://www.parsecdn.com/js/parse-1.6.4.min.js"></script>
+	<script src="js/bootstrap-table.js"></script>
+	
+
+
+	<script src="js/getSchedule.js"></script>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-71076627-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+	
+</body>
+</html>

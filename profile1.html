@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+	<meta charset="UTF-8">
+	<title>Shift Table</title>
+	
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/style.css">
+	
+	<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+
+
+</head>
+
+<body>
+
+<header>
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar2">
+          			<span class="sr-only">Toggle navigation</span>
+         			<span class="icon-bar"></span>
+          			<span class="icon-bar"></span>
+         			<span class="icon-bar"></span>
+        		</button>
+				<a class="navbar-brand" href="index.html"><span>Shift Table</span></a>
+			</div>
+			 <div class="collapse navbar-collapse" id="myNavbar2">
+				<ul class="nav navbar-nav">
+					<li ><a href="my_schedule2.html">My Calendar</a></li>
+					<li ><a href="group.html">Group</a></li>
+					<li class="active"><a href="Profile1.html">Profile</a></li>
+				</ul>	
+				<ul class="nav navbar-nav navbar-right">
+					<li><span id="username"></span></li>
+					<li><button type="button" class="btn btn-link btn-lg" id="signOut">Sign Out</button></li>
+				</ul>
+			</div>
+		</div>	
+	</nav>
+</header>
+
+	
+<br><br>
+	<div class="page container" >
+		<br><br>
+		<div class="col-xs-12 col-sm-12 col-md-12 user">
+			<div class="s-icon face"></div>
+			<h2 id="username_big"></h2>
+		</div>	
+
+		<div class="col-xs-offset-0 col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-2 col-md-8">
+
+			<div class="jumbotron animated bounceInDown">
+			<h2>Update Profile</h2>
+			<form class="form-horizontal" id="myprofile" role="form">
+				<label class="col-md-4" for="firstName">First Name</label>
+					<div class="col-md-8">
+				         <input id="firstName" name="firstName" type="text" class="form-control input-md">
+				         <span class="help-block"><script>document.write(localStorage.getItem("firstName"));</script></span>  
+		            </div>
+				<label class="col-md-4" for="lastName">Last Name</label>
+					<div class="col-md-8">
+				         <input id="lastName" name="lastName" type="text" class="form-control input-md">
+				         <span class="help-block"><script>document.write(localStorage.getItem("lastName"));</script></span>  
+		            </div>
+				<label class="col-md-4" for="textinput">Change Email</label>
+					<div class="col-md-8">
+				         <input id="textinput" name="email" type="text" class="form-control input-md">
+				         <span class="help-block"><script>document.write(localStorage.getItem("email"));</script></span>  
+		            </div>
+					<br>
+				
+					
+				</form>
+				<button type="submit" class="btn btn-success btn-block btn-lg" id="profilesave">Save</button>
+				</div>
+		</div>	
+				
+	</div>
+
+
+<!-- Modal -->
+<div class="modal fade bd-example-modal-lg" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+          <span class="sr-only">Close</span>
+        </button>
+        <h4 class="modal-title" id="myModalLabel">Result</h4>
+      </div>
+      <div class="modal-body">
+			<h2 class="text-center" id="groupName"></h2>
+        	<div class="timeTable">
+				<div id="resultLine"></div>
+			</div>
+
+			<h3 class="text-center" id="weekResult"></h3>
+			<h3 class="text-center" id="address"></h3>
+				<div id="map-canvas" style="width: 100%; height: 400px">
+
+      </div>
+      <div class="modal-footer">
+        
+        <button type="button" class="btn btn-success">Save to iCal</button>
+        <button type="button" class="btn btn-success">Save to gCal</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+          
+                    <p class="copyright text-muted small">Shift Table &copy; Build in 11.22.2015. All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+		
+
+	<script src="js/parse-1.6.4.min.js"></script>
+	<script src="js/jquery-2.1.4.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="http://www.parsecdn.com/js/parse-1.6.4.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0OkRwvqZhG0Jn34T2g7bb3BVu5Uq7A0Y"></script>
+	<script src="js/group.js"></script>
+	<script src="js/profile.js"></script>
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-71076627-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+	
+</body>
+</html>
